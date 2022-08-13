@@ -1,6 +1,3 @@
-from re import A
-
-
 myname = "serhii"
 date_today = 'friday'
 print(f'Good day {myname.capitalize()}! {date_today.capitalize()} is a perfect day to learn some python.')
