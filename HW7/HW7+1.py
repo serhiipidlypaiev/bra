@@ -79,13 +79,11 @@ DEPARTMENTS = {
 DEPARTMENTS_LIST = []
 for keys in DEPARTMENTS:
     list_keys = DEPARTMENTS.get(keys)
-    for i in list_keys:
-        name_all = i.get('name').split(' ')
-        birthdate = i.get('birthdate')
-        DEPARTMENTS_LIST.append({"First name": name_all[0], "Second Name": name_all[1], "birthdate": birthdate, "Department":keys})
-    #for i in range(len(DEPARTMENTS.get(keys))):
-    #    name_birthdate = ((DEPARTMENTS.get(keys)[i]).get('name')).split(" ")
-    #    birthdate = (DEPARTMENTS.get(keys)[i]).get('birthdate')
-    #    DEPARTMENTS_LIST.append({"First name": name_birthdate[0], "Second Name": name_birthdate[1], "birthdate": birthdate, "Department":keys})
-    #print(DEPARTMENTS_LIST)
+    for personal_dict in list_keys:
+        first_name, last_name = personal_dict.get('name').split(' ')
+        birthdate = personal_dict.get('birthdate')
+        DEPARTMENTS_LIST.append({"First name": first_name,
+                                 "Second Name": last_name,
+                                 "birthdate": birthdate,
+                                 "Department":keys}) 
 pprint.pprint(DEPARTMENTS_LIST)
