@@ -1,4 +1,5 @@
 import pprint
+
 DEPARTMENTS = {
     "devops": [
         {
@@ -80,10 +81,14 @@ DEPARTMENTS_LIST = []
 for keys in DEPARTMENTS:
     list_keys = DEPARTMENTS.get(keys)
     for personal_dict in list_keys:
-        first_name, last_name = personal_dict.get('name').split(' ')
-        birthdate = personal_dict.get('birthdate')
-        DEPARTMENTS_LIST.append({"First name": first_name,
-                                 "Second Name": last_name,
-                                 "birthdate": birthdate,
-                                 "Department":keys}) 
+        first_name, last_name = personal_dict.get("name").split(" ")
+        birthdate = personal_dict.get("birthdate")
+        DEPARTMENTS_LIST.append(
+            {
+                "First name": first_name,
+                "Second Name": last_name,
+                "birthdate": birthdate,
+                "Department": keys,
+            }
+        )
 pprint.pprint(DEPARTMENTS_LIST)
