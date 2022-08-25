@@ -8,6 +8,6 @@ def make_country(counrty,capital):
 while True:
     work = input('Do you want work? y or n: ')
     if work == 'y':
-        make_country(counrty = input('Please write the country: '), capital = input('Please write the capital: '))
+        make_country(print('Please write the country: '), print('Please write the capital: '))
     else:
         break
