@@ -80,9 +80,11 @@ for keys in DEPARTMENTS:
     for i in range(len(DEPARTMENTS.get(keys))):
         name_birthdate = ((DEPARTMENTS.get(keys)[i]).get('name')).split(" ")
         birthdate = (DEPARTMENTS.get(keys)[i]).get('birthdate')
-        DEPARTMENTS_LIST.append({"First name": name_birthdate[0], "Second Name": name_birthdate[1], "birthdate": birthdate, "Department":keys})
+        DEPARTMENTS_LIST.append({"First name": name_birthdate[0], 
+                                 "Second Name": name_birthdate[1], 
+                                 "birthdate": birthdate, "Department":keys})
 print(DEPARTMENTS_LIST)
 """all from new line"""
-#for i in range(len(DEPARTMENTS_LIST)):
+# for i in range(len(DEPARTMENTS_LIST)):
 #    for k, v in DEPARTMENTS_LIST[i].items():
 #        print(k, '-->', v)
