@@ -1,13 +1,6 @@
 data = input('Input your words: ')
-list1 = data.split(' ')
-print(len(list1))
+list1 = data.split()
 full={}
-for n in list1:
-    i=0
-    k=0
-    while i in range(len(list1)):
-        if n == list1[i]:
-            k+=1
-        i+=1
-    full.update({n:k})
+for key in list1:
+    full[key] = full.get(key, 0) + 1
 print('Dictionary: ', full)
